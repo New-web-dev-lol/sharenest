@@ -1,0 +1,634 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 100px;
+  background-color: hsl(40, 29%, 96%);
+  color: hsl(105, 8%, 22%);
+}
+
+/* Start of NAV */
+
+.navBarSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(40, 29%, 96%);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 0;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: grey;
+}
+
+.navLogo img {
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: hsl(105, 8%, 22%);
+}
+
+.navBarSection ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.navBarSection a {
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  padding: 8px 5px;
+  color: hsl(105, 8%, 22%);
+}
+
+.navBarSection a:hover {
+  color: hsl(93, 11%, 47%);
+  border-bottom: 2px solid hsl(93, 11%, 47%);
+}
+
+.navInput {
+  display: flex;
+  gap: 12px;
+}
+
+.navInput button {
+  cursor: pointer;
+  padding: 10px 18px;
+  background-color: hsl(105, 8%, 22%);
+  border: 1px solid hsl(105, 8%, 22%);
+  border-radius: 6px;
+  color: hsl(40, 29%, 96%);
+}
+
+.navInput button:hover {
+  background-color: hsl(93, 11%, 35%);
+}
+
+/* Host container */
+
+.hostContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#hostForm {
+  position: relative;
+  width: 400px;
+  max-width: 85%;
+  padding: 30px;
+  background-color: hsl(40, 29%, 96%);
+  border-radius: 12px;
+  color: hsl(105, 8%, 22%);
+}
+
+#closebtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  background-color: transparent;
+  color: hsl(105, 8%, 22%);
+  border: none;
+  padding: 5px;
+}
+
+.hostDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.hostDetails input {
+  padding: 12px;
+  border: 1px solid hsl(60, 12%, 80%);
+  border-radius: 6px;
+  background-color: white;
+}
+
+.hostDetails button {
+  padding: 12px;
+  background-color: hsl(105, 8%, 22%);
+  color: hsl(40, 29%, 96%);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Sign up container */
+
+#signupOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#signupForm {
+  position: relative;
+  width: 400px;
+  max-width: 85%;
+  padding: 30px;
+  background-color: hsl(40, 29%, 96%);
+  border-radius: 12px;
+  color: hsl(105, 8%, 22%);
+}
+
+#closeSignup {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  background-color: transparent;
+  color: hsl(105, 8%, 22%);
+  border: none;
+  padding: 5px;
+}
+
+#signupDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+#signupDetails input {
+  padding: 12px;
+  border: 1px solid hsl(60, 12%, 80%);
+  border-radius: 6px;
+  background-color: white;
+}
+
+#signupDetails button {
+  padding: 12px;
+  background-color: hsl(105, 8%, 22%);
+  color: hsl(40, 29%, 96%);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Payment popup */
+
+#paymentOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#paymentForm {
+  position: relative;
+  width: 400px;
+  max-width: 85%;
+  padding: 30px;
+  background-color: hsl(40, 29%, 96%);
+  border-radius: 12px;
+  color: hsl(105, 8%, 22%);
+}
+
+#closePayment {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  background-color: transparent;
+  color: hsl(105, 8%, 22%);
+  border: none;
+  padding: 5px;
+}
+
+#paymentDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+#paymentDetails input {
+  padding: 12px;
+  border: 1px solid hsl(60, 12%, 80%);
+  border-radius: 6px;
+  background-color: white;
+}
+
+#paymentDetails button {
+  padding: 12px;
+  background-color: hsl(105, 8%, 22%);
+  color: hsl(40, 29%, 96%);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* End of NAV */
+
+/* Start of first sec */
+
+.firstSection {
+  color: hsl(105, 8%, 22%);
+  padding: 70px 0;
+}
+
+.firstSection h3 {
+  color: hsl(93, 11%, 47%);
+  margin-bottom: 20px;
+}
+
+.firstSection h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.firstSection p {
+  color: hsl(105, 8%, 30%);
+  margin-bottom: 25px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.firstSection ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style-type: none;
+  color: hsl(105, 8%, 30%);
+}
+
+.hero span {
+  color: hsl(93, 11%, 47%);
+}
+
+/* End of first sec */
+
+/* Start of sec2 */
+
+.section2 {
+  background-color: transparent;
+  padding: 25px 0;
+  scroll-margin-top: 100px;
+}
+
+.section2 h2 {
+  color: hsl(105, 8%, 22%);
+  margin-bottom: 10px;
+}
+
+.section2 p {
+  color: hsl(105, 8%, 35%);
+  margin-bottom: 25px;
+}
+
+.cartegoryList ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style-type: none;
+  justify-content: space-evenly;
+  border-bottom-style: solid;
+  padding: 10px;
+  border-bottom-color:hsl(105, 8%, 22%) ;
+}
+.exploreText h2{
+ margin-top: 10px;
+ padding-left: 720px;
+}
+.exploreText p{
+    margin-top: 10px;
+    margin-bottom: 12px;
+    padding-left: 700px;
+}
+
+/* Created last minute */
+
+.section2 li button {
+  color: hsl(105, 8%, 22%);
+  background-color: hsl(90, 18%, 90%);
+  padding: 10px 16px;
+  cursor: pointer;
+  border: 1px solid hsl(60, 12%, 82%);
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.section2 li button:hover {
+  background-color: hsl(93, 11%, 47%);
+  color: white;
+  border-color: hsl(93, 11%, 47%);
+}
+
+/* End of sec2 */
+
+/* Subscriptions */
+
+.subscriptionsSection {
+  padding: 35px 0;
+}
+
+.subscriptionsSection > h2 {
+  margin-bottom: 10px;
+}
+
+.subscriptionsSection > p {
+  color: hsl(105, 8%, 35%);
+  margin-bottom: 15px;
+}
+
+/* Subscription container */
+
+.parentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  justify-content: space-evenly;
+  padding: 25px 0;
+  scroll-margin-top: 100px;
+  padding-bottom: 90px;
+}
+
+.subContainer {
+  width: 100%;
+  max-width: 300px;
+  min-width: 0;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(60, 12%, 87%);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.subImage {
+  width: 100%;
+  height: 150px;
+  background-color: hsl(90, 18%, 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.subImage img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Text and details area */
+
+.subscriptionContent {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  flex: 1;
+}
+
+/* Category */
+
+.subCategory {
+  color: hsl(93, 11%, 40%);
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+/* Subscription name */
+
+.subName {
+  color: hsl(105, 8%, 22%);
+  font-size: 23px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Description */
+
+.subDescription {
+  color: hsl(105, 8%, 30%);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.subscription-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid hsl(60, 12%, 90%);
+  padding-top: 14px;
+  margin-top: auto;
+}
+
+.subscription-price h4 {
+  color: hsl(105, 8%, 22%);
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.subscription-price p {
+  color: hsl(105, 8%, 35%);
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.subscription-slots {
+  color: hsl(105, 8%, 30%);
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.subJoinButton {
+  width: 100%;
+  background-color: hsl(105, 8%, 22%);
+  color: hsl(40, 29%, 96%);
+  font-size: 14px;
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.subJoinButton:hover {
+  background-color: hsl(93, 11%, 35%);
+}
+
+/* End of subscription */
+
+/* How it works */
+
+.howItWorks {
+  padding: 50px 0;
+}
+
+.howItWorks h2 {
+  margin-bottom: 25px;
+}
+
+.howItWorksContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.howItWorksContent article {
+  flex: 1;
+  min-width: 200px;
+  padding: 25px;
+  background-color: hsl(90, 18%, 90%);
+  border-radius: 10px;
+}
+
+.howItWorksContent h3 {
+  color: hsl(93, 11%, 40%);
+  margin-bottom: 15px;
+}
+
+.howItWorksContent h4 {
+  margin-bottom: 10px;
+}
+
+.howItWorksContent p {
+  color: hsl(105, 8%, 30%);
+  line-height: 1.5;
+}
+
+/* Authentication */
+
+.authentication {
+  padding: 40px 0;
+}
+
+.authentication-container {
+  padding: 30px;
+  background-color: hsl(90, 18%, 90%);
+  border-radius: 10px;
+}
+
+.authentication-container h2 {
+  margin-bottom: 15px;
+}
+
+.authentication-container p {
+  color: hsl(105, 8%, 30%);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.payNowButton {
+  padding: 13px 28px;
+  background-color: hsl(105, 8%, 22%);
+  color: hsl(40, 29%, 96%);
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid hsl(105, 8%, 22%);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.payNowButton:hover {
+  background-color: hsl(93, 11%, 35%);
+}
+
+.payNowButton:active {
+  transform: scale(0.98);
+}
+
+/* Frequently asked questions */
+
+.faqSection {
+  padding: 40px 0;
+}
+
+.faqSection h2 {
+  margin-bottom: 20px;
+}
+
+.faqSection details {
+  padding: 18px 0;
+  border-bottom: 1px solid hsl(60, 12%, 82%);
+}
+
+.faqSection summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faqSection details p {
+  color: hsl(105, 8%, 30%);
+  padding-top: 12px;
+  line-height: 1.5;
+}
+
+/* Footer */
+
+.footer {
+  background-color: hsl(90, 18%, 90%);
+  color: hsl(105, 8%, 22%);
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.footer h3 {
+  margin-bottom: 12px;
+}
+
+.footer p {
+  color: hsl(105, 8%, 30%);
+  font-size: 13px;
+  margin: 12px 0;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.footerLinks a {
+  display: block;
+  text-decoration: none;
+  color: hsl(105, 8%, 22%);
+}
+
+.footerLinks a:hover {
+  color: hsl(93, 11%, 40%);
+}

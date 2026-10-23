@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Share Nest</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navBarSection">
+
+        <div class="navLogo">
+            <img src="css/images/nest.jpg" width="50px" alt="Share Nest logo">
+            <h2>Share Nest</h2>
+        </div>
+
+        <div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#Explore">Explore</a></li>
+                <li><a href="#howItWorks">How it works</a></li>
+                <li><a href="#authentication">Authentication</a></li>
+            </ul>
+        </div>
+
+        <div class="navInput">
+            <button class="hostbtn" type="button">Host</button>
+            <button id="signupButton" type="button">Sign Up</button>
+        </div>
+
+    </nav>
+</header>
+
+
+<!-- Host popup -->
+
+<div class="hostContainer">
+    <div id="hostForm">
+
+        <button id="closebtn" type="button">X</button>
+
+        <h2>Become a Host</h2>
+        <p>Get started today</p>
+
+        <form class="hostDetails">
+
+            <label for="hostFullName">Full Name</label>
+            <input type="text" id="hostFullName" placeholder="Enter your full name" required>
+
+            <label for="hostEmail">Email Address</label>
+            <input type="email" id="hostEmail" placeholder="Enter your email" required>
+
+            <label for="subscriptiontype">Subscription type</label>
+            <input type="text" id="subscriptiontype" placeholder="List subscription" required>
+
+            <button type="submit">Become a Host</button>
+
+        </form>
+
+    </div>
+</div>
+
+
+<!-- Sign up popup -->
+
+<div id="signupOverlay">
+    <div id="signupForm">
+
+        <button id="closeSignup" type="button">X</button>
+
+        <h2>Create Account</h2>
+        <p>Sign up to get started</p>
+
+        <form id="signupDetails">
+
+            <label for="signupFullName">Full Name</label>
+            <input type="text" id="signupFullName" placeholder="Enter your full name" required>
+
+            <label for="signupEmail">Email Address</label>
+            <input type="email" id="signupEmail" placeholder="Enter your email" required>
+
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" placeholder="Create a password" required>
+
+            <button type="submit">Create Account</button>
+
+        </form>
+
+    </div>
+</div>
+
+
+<!-- Payment popup -->
+
+<div id="paymentOverlay">
+    <div id="paymentForm">
+
+        <button id="closePayment" type="button">X</button>
+
+        <h2>Share Nest Authentication</h2>
+        <p>Enter your details to continue with the KSh 100 payment.</p>
+
+        <form id="paymentDetails">
+
+            <label for="paymentEmail">Email Address</label>
+            <input type="email" id="paymentEmail" placeholder="Enter your email" required>
+
+            <label for="paymentPhone">Phone Number</label>
+            <input type="tel" id="paymentPhone" placeholder="Enter your M-Pesa number" required>
+
+            <button type="submit">Pay 100</button>
+
+        </form>
+
+    </div>
+</div>
+
+
+<main class="hero">
+
+    <!-- First section -->
+
+    <section class="firstSection">
+
+        <div>
+            <h3>SMARTER SUBSCRIPTIONS</h3>
+
+            <h1>More premium.<br><span>Less spending.</span></h1>
+
+            <p>Discover affordable access to eligible digital subscriptions from verified members.</p>
+
+            <ul>
+                <li>Reviewed listings</li>
+                <li>Transparent pricing</li>
+                <li>Provider-compliant sharing</li>
+            </ul>
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+
+    <section class="section2" id="Explore">
+
+        <div>
+            <h2>Explore Categories</h2>
+            <p>Find the right services you need</p>
+        </div>
+
+        <div class="cartegoryList">
+            <ul>
+                <li><button id="allBtn" type="button">ALL</button></li>
+                <li><button id="entertainmentBtn" type="button">Entertainment</button></li>
+                <li><button id="musicBtn" type="button">Music</button></li>
+                <li><button id="aiToolsBtn" type="button">AI Tools</button></li>
+                <li><button id="devBtn" type="button">DEV & WORK</button></li>
+                <li><button id="gamingBtn" type="button">Gaming</button></li>
+            </ul>
+        </div>
+
+    </section>
+
+
+    <!-- Subscription cards -->
+
+    <section class="subscriptionsSection">
+
+  <div class="exploreText">
+        <h2>Popular Subscriptions</h2>
+        <p>Compare available seats and monthly prices.</p>
+  </div>
+
+
+        <!-- Entertainment -->
+
+<div class="parentContainer Entertainment" >
+
+  <!-- NETFLIX -->
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/Netflix.jpg" alt="Netflix logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">Entertainment</p>
+
+        <h3 class="subName">Netflix</h3>
+
+        <p class="subDescription">
+            Enjoy movies and TV shows with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 300</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                3 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+<!-- DIsney + -->
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/disney.jpeg" alt=" DIsney + logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">Entertainment</p>
+
+        <h3 class="subName"> DIsney +</h3>
+
+        <p class="subDescription">
+            Enjoy movies and TV shows with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 500</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                2 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+<!-- Show Max -->
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/Showmax.png" alt=" Show Max logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">Entertainment</p>
+
+        <h3 class="subName"> Show Max</h3>
+
+        <p class="subDescription">
+            Enjoy movies and TV shows with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 300</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                3 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+<!-- HBO Max -->
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/hbo.jpeg" alt="HBO Max logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">Entertainment</p>
+
+        <h3 class="subName">HBO Max</h3>
+
+        <p class="subDescription">
+            Enjoy movies and TV shows with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 260</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                4 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+ </div>
+
+
+        <!-- Music -->
+
+<div class="parentContainer music">
+
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/spotify.webp" alt="Spotify logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">Music</p>
+
+        <h3 class="subName">Spotify</h3>
+
+        <p class="subDescription">
+            Enjoy music with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 100</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                5 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/apple.png" alt=" Apple Music logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">Music</p>
+
+        <h3 class="subName"> Apple Music</h3>
+
+        <p class="subDescription">
+            Enjoy music with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 380</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                1 slot available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/youtube_music_preview.png" alt=" logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">Music</p>
+
+        <h3 class="subName"> YouTube music</h3>
+
+        <p class="subDescription">
+            Enjoy music with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 450</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                4 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/Amazon-Music-ec836bd5efac4f00ac9ed6acd89b83cc.jpg" alt="Amazon music logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">Music</p>
+
+        <h3 class="subName">Amazon Music</h3>
+
+        <p class="subDescription">
+            Enjoy music with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 170</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                4 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+</div>
+
+
+        <!-- Gaming -->
+
+        <div class="parentContainer gaming">
+
+  <!-- Gaming -->
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/xbox-game-pass-ultimate_rpyw.png" alt="Xbox Game Pass Ultimate logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">Gaming</p>
+
+        <h3 class="subName">Xbox Game Pass Ultimate</h3>
+
+        <p class="subDescription">
+            Enjoy Gaming with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 3000</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                1 slot available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/ps.jpg" alt=" Playstation Plus Essential logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">Gaming</p>
+
+        <h3 class="subName">Playstation Plus Essential</h3>
+
+        <p class="subDescription">
+            Enjoy Gaming with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 1000</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                1 slot available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/1_nso.avif" alt=" Nintendo Switch Online Family logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">Gaming</p>
+
+        <h3 class="subName"> Nintendo Switch Online Family</h3>
+
+        <p class="subDescription">
+            Enjoy music with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 3500</h4>
+                <p>per year</p>
+            </div>
+
+            <p class="subscription-slots">
+                8 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/ea.jpg" alt="EA Paly logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">Gaming</p>
+
+        <h3 class="subName">EA Play</h3>
+
+        <p class="subDescription">
+            Enjoy Gaming with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 600</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                1 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+        </div>
+
+
+        <!-- AI Tools -->
+
+        <div class="parentContainer AITools">
+        
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/chat.png" alt=" logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">AI Tools</p>
+
+        <h3 class="subName">Chat GPT Team</h3>
+
+        <p class="subDescription">
+            Enjoy AI Tools a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 1400</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                3 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/claude.jpg" alt=" Claude logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">AI Tools</p>
+
+        <h3 class="subName"> Claude Pro</h3>
+
+        <p class="subDescription">
+            Enjoy AI Tools with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 2500</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                4 slot available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/perpl.png" alt="Perplexity Pro logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">AI Tools</p>
+
+        <h3 class="subName">Perplexity Pro</h3>
+
+        <p class="subDescription">
+            Enjoy AI Tools with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 3000</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                2 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/midj.jpg" alt=" Midjourney Basics logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">AI tools</p>
+
+        <h3 class="subName"> Midjourney Basics</h3>
+
+        <p class="subDescription">
+            Enjoy AI Tools with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 2000</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                3 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+</div>
+
+
+        </div>
+
+
+        <!-- DEV & WORK -->
+
+        <div class="parentContainer Work">
+
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/git.png" alt="GitHub logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">DEV & WORK</p>
+
+        <h3 class="subName">GitHub </h3>
+
+        <p class="subDescription">
+            Enjoy Dev Tools with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 100</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                5 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/slack.png" alt=" Slack Pro logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">DEV & WORK</p>
+
+        <h3 class="subName">Slack Pro</h3>
+
+        <p class="subDescription">
+            Enjoy DEV Tools with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 1000</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                1 slot available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+<!-- Show Max -->
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/zoom-workplace-software-500x500.webp" alt="zoom logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">DEV & WORK</p>
+
+        <h3 class="subName"> Zoom Workplace Pro</h3>
+
+        <p class="subDescription">
+            Enjoy DEV Tools with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 1500</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                2 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+
+<div class="subContainer">
+
+    <div class="subImage">
+        <img src="css/images/gram.webp" alt="Grammarly Business logo">
+    </div>
+
+    <div class="subscriptionContent">
+
+        <p class="subCategory">DEV & WORK</p>
+
+        <h3 class="subName">Grammarly Business</h3>
+
+        <p class="subDescription">
+            Enjoy music with a shared subscription plan.
+        </p>
+
+        <div class="subscription-details">
+
+            <div class="subscription-price">
+                <h4>KSh 2000</h4>
+                <p>per month</p>
+            </div>
+
+            <p class="subscription-slots">
+                12 slots available
+            </p>
+
+        </div>
+
+        <button class="subJoinButton">
+            Join Now
+        </button>
+
+    </div>
+</div>
+ 
+ <!-- END OF SUB -->
+
+
+
+
+        </div>
+
+    </section>
+
+
+    <!-- How it works -->
+
+    <section class="howItWorks" id="howItWorks">
+
+        <h2>How it works</h2>
+
+        <div class="howItWorksContent">
+
+            <article>
+                <h3>01</h3>
+                <h4>Explore</h4>
+                <p>Browse available subscriptions and compare their prices and slots.</p>
+            </article>
+
+            <article>
+                <h3>02</h3>
+                <h4>Choose</h4>
+                <p>Select a subscription that fits your needs and check its details.</p>
+            </article>
+
+            <article>
+                <h3>03</h3>
+                <h4>Join</h4>
+                <p>Complete the required steps and follow the host's joining instructions.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Authentication fee -->
+
+    <section id="authentication" class="authentication">
+
+        <div class="authentication-container">
+
+            <h2>Share Nest Authentication</h2>
+
+            <p>
+                To access subscription joining features on Share Nest,
+                each account is required to pay a one-time authentication
+                fee of <strong>KSh 100</strong>.
+            </p>
+
+            <p>
+                This fee is paid only once per account, not every time
+                you join a subscription.
+            </p>
+
+            <p>
+                The fee helps us manage account access and support a
+                smoother sharing experience for our members.
+            </p>
+
+            <button class="payNowButton" type="button">
+                Pay Now — KSh 100
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Frequently asked questions -->
+
+    <section class="faqSection">
+
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+            <summary>How does subscription sharing work?</summary>
+            <p>You browse the available listings and follow the joining instructions provided by the host.</p>
+        </details>
+
+        <details>
+            <summary>How are listings verified?</summary>
+            <p>Check the listing details and host information before joining. Verification features can be added when the backend is ready.</p>
+        </details>
+
+        <details>
+            <summary>What happens if access fails?</summary>
+            <p>Contact the host using the details provided for the listing.</p>
+        </details>
+
+    </section>
+
+</main>
+
+
+<!-- Footer -->
+
+<footer class="footer">
+
+    <h3>Share Nest</h3>
+
+    <p>A smarter way to access eligible digital subscriptions.</p>
+
+    <nav class="footerLinks">
+        <a href="#">Home</a>
+        <a href="#Explore">Explore Subscriptions</a>
+        <a href="#howItWorks">How it works</a>
+        <a href="#authentication">Authentication</a>
+        <a href="#" class="hostFooterLink">Become a Host</a>
+    </nav>
+
+    <p>Kenya · M-Pesa planned · Provider-compliant sharing only</p>
+
+    <p>&copy; 2026 Share Nest. All rights reserved.</p>
+
+    <p>Made by Brian Ngugi 2026</p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
