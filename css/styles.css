@@ -528,7 +528,53 @@ body {
   color: hsl(105, 8%, 30%);
   line-height: 1.5;
 }
+/* Join popup */
+.joinPopup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: hsla(100, 10%, 10%, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
 
+.joinPopupCard {
+    position: relative;
+    width: 380px;
+    max-width: 90%;
+    padding: 25px;
+    background-color: hsl(40, 29%, 96%);
+    border-radius: 12px;
+}
+
+.closePopup {
+    display: block;
+    margin-left: auto;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#popupPayForm input,
+#popupPayButton {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+#popupPayForm input {
+    border: 1px solid hsl(90, 10%, 75%);
+}
+
+#popupPayButton {
+    border: none;
+    background-color: hsl(105, 12%, 29%);
+    color: white;
+    cursor: pointer;
+}
 /* Authentication */
 
 .authentication {

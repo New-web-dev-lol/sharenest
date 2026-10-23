@@ -138,4 +138,32 @@ closePayment.addEventListener("click", function () {
 })
 
 
-// Stop forms from refreshing the page
+const joinPopup = document.getElementById("joinPopup")
+const popupCardDetails = document.getElementById("popupCardDetails")
+const popupPayButton = document.getElementById("popupPayButton")
+
+document.querySelectorAll(".subJoinButton").forEach(function(button) {
+    button.addEventListener("click", function() {
+        const card = button.closest(".subContainer")
+        const cardCopy = card.cloneNode(true)
+
+        cardCopy.querySelector(".subJoinButton").remove()
+
+        popupCardDetails.innerHTML = ""
+        popupCardDetails.appendChild(cardCopy)
+
+        const price = card.querySelector(".subscription-price").textContent
+        popupPayButton.textContent = "Pay Now — " + price.split("/")[0].trim()
+
+        joinPopup.style.display = "flex"
+    })
+})
+
+document.getElementById("closePopup").addEventListener("click", function() {
+    joinPopup.style.display = "none"
+})
+
+document.getElementById("popupPayForm").addEventListener("submit", function(event) {
+    event.preventDefault()
+    alert("Payment will be connected here")
+})
